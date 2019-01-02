@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fa/css/font-awesome.min.css">
+    <script src="js/template-web.js"></script>
+    <link rel="stylesheet" href="css/new.css">
+    <title>新闻</title>
+</head>
+<body>
+<!--首页内容-->
+<div class="xy_container">
+    <header class="xy_search">
+        <a href="javascript:history.back();" class="left"><span class="fa fa-arrow-left"></span></a>
+        <h3>新闻频道</h3>
+    </header>
+    <div class="xy_content">
+        <div class="xy_wrapper">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--标题-->
+                    <div class="main_container">
+                        <!--TODO-->
+                        <script type="text/html" id="newTemplate">
+
+                            <div class="title">
+                                <h3>{{title}}</h3>
+                            </div>
+
+                            <!--作者 时间-->
+                            <div class="subhead">
+                                {{date.time}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作者:{{author}}
+                            </div>
+
+                            <!--新闻内容-->
+                            <div class="new_container">
+                                {{@description}}
+
+                            </div>
+
+                        </script>
+
+                    </div>
+                    <!--评论区-->
+                    <div class="comment">
+                        <span class="comment_title">相关评论</span>
+
+                        <span class="comment_send">
+                            <a href="comment.html" data-itemId="">发帖&nbsp;></a>
+                        </span>
+
+                        <ul class="comments_list">
+                            <!--TODO-->
+                            <script type="text/template" id="commentTemplate">
+                                <% if(list.length){  %>
+                                <% for(var i = 0;i < list.length; i++){ %>
+
+                            <li class="comments">
+                                <div class="com_top">
+                                    <span class="name"><%= list[i]['name'] %>：</span>
+                                    <span class="zan ">
+                                        <span class="like_num"><%= list[i]['assit'] %></span>
+                                        <span class="icon_zan fa fa-thumbs-o-up"></span>
+                                    </span>
+                                </div>
+                                <div class="com_content">
+                                    <%= list[i]['commentText'] %>
+                                </div>
+                            </li>
+
+                                <% } %>
+                                <% }else{ %>
+                                <p>当前新闻没有评论</p>
+                                <% } %>
+                            </script>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="assets/mui/js/mui.min.js"></script>
+<script src="assets/zepto/zepto.min.js"></script>
+<!--<script src="assets/artTemplate/template-native.js"></script>-->
+<script src="js/mainNew.js"></script>
+<script src="js/new.js"></script>
+</body>
+</html>

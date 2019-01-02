@@ -1,0 +1,97 @@
+.cate_Left{
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    left: 0;
+
+    z-index: 10000;
+}
+.cate_Left ul{
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.cate_Left ul li {
+    width: 25%;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    background: #f3f4f5;
+    float: left;
+}
+.cate_Left ul li:last-child{
+    border-bottom: none;
+}
+.cate_Left ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+
+}
+.cate_Left ul li.now{
+    background: #fff;
+
+}
+.cate_Left ul li.now a{
+    color: red;
+}
+
+.cate_Right{
+
+    height: 80%;
+    overflow: hidden;
+}
+
+.xy_search a:last-child{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -5px;
+    background: #ff3333;
+    border: none;
+
+}
+
+/*菜单*/
+#popover{
+
+    width: 100%;
+    left: 0px !important;
+    top: 45px !important;
+
+}
+.mui-active{
+    left: 0;
+}
+.mui-popover .mui-popover-arrow:after{
+    width: 0;
+    height: 0;
+
+}
+
+/*修改mui列表样式*/
+.mui-table-view-cell>a:not(.mui-btn) {
+
+    white-space: normal;
+
+}
+
+.mui-table-view .mui-media-object{
+    width: 105px;
+    height: 75px;
+    max-width: 105px;
+}
+.cate_Right .mui-media-body p{
+    position: absolute;
+    bottom:10px;
+}
+
+
+
+
+

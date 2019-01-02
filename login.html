@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/login.css">
+    <title>用户登录</title>
+</head>
+<body>
+<!--首页内容-->
+<div class="xy_container">
+    <header class="xy_search">
+        <a href="javascript:history.back();" class="left"><span class="fa fa-arrow-left"></span></a>
+        <h3>用户登录</h3>
+    </header>
+    <div class="xy_content">
+        <div class="xy_wrapper">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <span class="head"><img src="../images/登录.png" alt=""></span>
+                    <div class="login">
+                      <div class="mui-content-padded">
+                            <form class="mui-input-group">
+                                <div class="mui-input-row">
+                                    <label>用户名</label>
+                                    <input type="text" name="username" placeholder="请输入用户名">
+                                </div>
+                                <div class="mui-input-row">
+                                    <label>密码</label>
+                                    <input type="password" class="mui-input-password" name="password" placeholder="请输入密码">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="btn">
+                            <button class="mui-btn mui-btn-primary" id="loginBtn">登录</button>
+                            &nbsp;&nbsp;<button class="mui-btn mui-btn-primary" id="regBtn">注册</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="xy_footer">
+        <a class="tab_home fa fa-home" href="index.html"><span>首页</span></a>
+        <a class="tab_cate fa fa-bars" href="catalog.html"><span>分类</span></a>
+        <a class="tab_user fa fa-user now" href="user.html"><span>个人中心</span></a>
+    </footer>
+</div>
+
+<script src="assets/mui/js/mui.min.js"></script>
+<script src="assets/zepto/zepto.min.js"></script>
+<script src="assets/artTemplate/template-native.js"></script>
+<script src="js/common.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

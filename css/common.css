@@ -1,0 +1,103 @@
+.clearFix::before,
+.clearFix::after{
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+    clear: both;
+}
+
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+.xy_container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+/*头部*/
+.xy_container .xy_search{
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #ff3333;
+}
+
+
+.xy_search a{
+    position: absolute;
+    top: 0;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+}
+
+.xy_search h3{
+    font-size: 18px;
+    line-height: 45px;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    font-weight: normal;
+}
+
+.xy_container .xy_search input{
+    display: block;
+    background: #fff;
+    opacity:0.5;
+    width: 100%;
+    margin: auto;
+}
+
+/*主体内容*/
+.xy_content{
+    width: 100%;
+    height: 100%;
+    padding-top: 45px;
+    padding-bottom: 55px;
+}
+.xy_content .xy_wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/*脚部*/
+.xy_container .xy_footer{
+    width: 100%;
+    height: 55px;
+    position: absolute;
+    background: #fff;
+    left: 0;
+    bottom: 0;
+    z-index:1000000;
+}
+.xy_container .xy_footer a{
+    color: #000;
+    width: 33.333333%;
+    height: 55px;
+    float: left;
+    text-align: center;
+    padding-top: 10px;
+}
+.xy_container .xy_footer a.now{
+    color: red;
+}
+.xy_container .xy_footer a span{
+    display: block;
+    font-size: 12px;
+    padding-top: 6px;
+}

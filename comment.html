@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <title>评论</title>
+</head>
+<body>
+<!--首页内容-->
+<div class="xy_container">
+    <header class="xy_search">
+        <a href="javascript:history.back();" class="left"><span class="fa fa-arrow-left"></span></a>
+        <h3 class="tltle">评论</h3>
+
+    </header>
+   <!-中间内容->
+    <div class="xy_content">
+        <div class="xy_wrapper">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                     <div class="title">
+                         <h3>当前话题：加载中...</h3>
+                     </div>
+                    <div class="mui-input-row" style="margin: 10px 5px;">
+
+                        <textarea id="textarea" name="comments" rows="5" placeholder="发表态度"></textarea>
+                        <button class="btn">发表</button>
+
+                    </div>
+
+
+                    <!--评论区-->
+                    <div class="comment">
+                        <span class="comment_title">相关评论</span>
+                        <ul class="comments_list">
+                            <!--TODO-->
+                            <script type="text/template" id="commentTemplate">
+                                <% if(list.length){  %>
+                                <% for(var i = 0;i < list.length; i++){ %>
+
+                                <li class="comments">
+                                    <div class="com_top">
+                                        <span class="name"><%= list[i]['name'] %>：</span>
+                                        <span class="zan ">
+                                        <span class="like_num"><%= list[i]['assit'] %></span>
+                                        <span class="icon_zan fa fa-thumbs-o-up"></span>
+                                    </span>
+                                    </div>
+                                    <div class="com_content">
+                                        <%= list[i]['commentText'] %>
+                                    </div>
+                                </li>
+
+                                <% } %>
+                                <% }else{ %>
+                                <p>当前新闻没有评论</p>
+                                <% } %>
+                            </script>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="assets/mui/js/mui.min.js"></script>
+<script src="assets/zepto/zepto.min.js"></script>
+<script src="assets/artTemplate/template-native.js"></script>
+<script src="js/comment.js"></script>
+</body>
+</html>

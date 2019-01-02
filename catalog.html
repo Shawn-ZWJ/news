@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/catalog.css">
+    <title>新闻-分类</title>
+</head>
+<body>
+<!--首页内容-->
+<div class="xy_container">
+    <header class="xy_search">
+        <a href="javascript:history.back();" class="left"><span class="fa fa-arrow-left"></span></a>
+        <h3 class="tltle">热点新闻</h3>
+        <div class = "mui-content">
+            <a href="#popover" id="openPopover" class="mui-btn fa fa-align-justify "></a>
+        </div>
+    </header>
+    <!--分类-->
+
+
+
+
+    <div id="popover" class="mui-popover">
+        <div class="cate_Left">
+            <ul>
+
+                <!--TODO-->
+            </ul>
+        </div>
+         
+    </div>
+
+
+    <!-中间内容->
+    <div class="xy_content">
+        <div class="xy_wrapper">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+
+                    <!--分类新闻-->
+                    <div class="cate_Right">
+                        <ul class="mui-table-view">
+
+                            <!--TODO-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="xy_footer">
+        <a class="tab_home fa fa-home" href="index.html"><span>首页</span></a>
+        <a class="tab_cate fa fa-bars now" href="catalog.html"><span>分类</span></a>
+        <a class="tab_user fa fa-user" href="user.html"><span>个人中心</span></a>
+    </footer>
+</div>
+<script type="text/template" id="firstTemplate">
+    <% for(var i = 0 ; i < list.length ; i ++){ %>
+    <li class="<%=i==0?'now':''%>"><a href="javascript:;" onclick="addTabs(this)" data-id="<%=list[i]['catalogId']%>"><%= list[i]['catalogName'] %></a></li>
+    <% } %>
+</script>
+<script type="text/template" id="secondTemplate">
+    <% if(list.length){  %>
+    <% for(var i = 0;i < list.length; i++){ %>
+    <li class="mui-table-view-cell mui-media">
+        <a href="new.html" data-itemId="<%=list[i]['itemID']%>">
+            <img class="mui-media-object mui-pull-left" src="<%= list[i]['image'] %>">
+            <div class="mui-media-body">
+                <%= list[i]['title'] %>
+                <p class='mui-ellipsis'>作者：<%= list[i]['author'] %></p>
+            </div>
+        </a>
+    </li>
+    <% } %>
+    <% }else{ %>
+    <p>当前分类没有新闻</p>
+    <% } %>
+</script>
+
+<script src="assets/mui/js/mui.min.js"></script>
+<script src="assets/zepto/zepto.min.js"></script>
+<script src="assets/artTemplate/template-native.js"></script>
+<script src="js/catalog.js"></script>
+</body>
+</html>

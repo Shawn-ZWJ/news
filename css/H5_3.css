@@ -1,0 +1,153 @@
+
+.content_1{
+    margin: 20px;
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+    box-sizing:border-box;
+    outline: #00FF00 dotted thick;
+    border-style:dotted solid double dashed;
+    border-width:10px;
+}
+.content_origin{
+    margin: 20px;
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+    border: #1c7430 solid 5px;
+     background:  url("../images/search_03.png") no-repeat ;
+    float: left;
+
+}
+.origin_border{
+
+    background-origin:border-box;
+
+
+}
+.origin_content{
+
+    background-origin:content-box;
+
+}
+.origin_padding{
+
+    background-origin:padding-box;
+
+}
+
+.content_clip{
+    margin: 20px;
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+    border: #1c7430 dashed 5px;
+    background:  #afd9ee ;
+    float: left;
+}
+.clip_border{
+
+    background-clip:border-box;
+
+
+}
+.clip_content{
+
+    background-clip:content-box;
+
+}
+.clip_padding{
+
+    background-clip:padding-box;
+}
+
+
+.content_size{
+    margin: 20px;
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+    border: #1c7430 dashed 1px;
+    background:  url("../images/search_03.png") no-repeat;
+    float: left;
+}
+.size_length{
+
+    background-size:50px 50px;
+
+
+}
+.size_percentage{
+
+    background-size:50% 50%;
+
+}
+.size_cover{
+
+    background-size:cover;
+}
+.size_contain{
+
+    background-size:contain;
+}
+
+h1
+{   overflow:hidden;
+    border: #afd9ee solid 1px;
+    width: 200px;
+    text-shadow: 5px 5px 5px #FF0000;
+    text-overflow: ellipsis;
+}
+
+.border{
+    border:15px solid transparent;
+    width:250px;
+    padding:10px 20px;
+    box-shadow: 10px 10px 5px #888888;
+}
+.resize{
+    border:3px solid #afd9ee;
+    padding:10px 40px;
+    width:300px;
+    resize:both;
+    overflow:auto;
+}
+.transform{
+    margin:30px;
+    width:200px;
+    height:100px;
+    background-color: #93afff;
+    /* Rotate div */
+    transform:rotate(10deg) skew(9deg) scale(1,2) translate(500px);
+
+}
+
+.transform2{
+    width: 200px;
+    height: 100px;
+    background-color: pink;
+    transition: width 0.6s ease 0s, height 0.3s ease-in 1s;
+   }
+.transform2:hover {
+
+    width: 600px;
+    height: 300px
+}
+
+.animation {
+    background-color: #00a4ff;
+    width: 200px;
+    height: 100px;
+    animation-name: goback;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+@keyframes goback {
+
+    100%{
+        transform: translateX(1000px);
+    }
+
+
+}
