@@ -7,12 +7,15 @@
 项目概览
 =========
 1.首页
+</br>  
 ![Image text](https://github.com/shing6/images/blob/master/index.png)
 </br> 
 ![Image text](https://github.com/shing6/images/blob/master/index1.png)
 <br>  
 2.分类
+<br> 
 ![Image text](https://github.com/shing6/images/blob/master/catalogy.png)
+<br> 
 ![Image text](https://github.com/shing6/images/blob/master/catelogy.png)
 <br>  
 3.新闻内容
