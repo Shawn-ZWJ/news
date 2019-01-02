@@ -39,4 +39,6 @@
 7.个人中心页面
 <br> 
 ![Image text](https://github.com/shing6/images/blob/master/profiex.png)
-
+<br> 
+<br> 
+[SSM后端链接](https://github.com/shing6/ssm_news)
